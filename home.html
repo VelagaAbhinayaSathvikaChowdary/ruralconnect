@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - RuralConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <div class="logo">RuralConnect</div>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="upload.html">Upload</a>
+    <a href="profile.html">Profile</a>
+    <a href="#" id="logoutBtn">Logout</a>
+  </div>
+</nav>
+
+<section>
+  <h2>Search & Filter</h2>
+  <input type="text" id="searchInput" placeholder="Search tools or skills...">
+  <select id="filterType">
+    <option value="all">All</option>
+    <option value="tool">Tool</option>
+    <option value="skill">Skill</option>
+  </select>
+</section>
+
+<h2>Available Tools</h2>
+<div class="cards" id="tools"></div>
+
+<h2>Available Skills / Tuitions</h2>
+<div class="cards" id="skills"></div>
+
+<!-- Modal -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <p id="modalPrice"></p>
+    <p id="modalAddress"></p>
+    <p id="modalPhone"></p>
+    <div style="display:flex; gap:10px; margin-top:10px;">
+      <button id="likeBtn">❤️ Like (0)</button>
+      <button id="dislikeBtn">💔 Dislike (0)</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  requireLogin();
+  populateHome();
+});
+</script>
+</body>
+</html>

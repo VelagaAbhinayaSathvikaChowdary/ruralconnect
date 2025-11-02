@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile - RuralConnect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <div class="logo">RuralConnect</div>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="upload.html">Upload</a>
+    <a href="profile.html">Profile</a>
+    <a href="#" id="logoutBtn3">Logout</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>My Uploads</h2>
+  <div class="cards" id="uploadsContainer"></div>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  requireLogin();
+  populateProfile();
+});
+</script>
+</body>
+</html>
